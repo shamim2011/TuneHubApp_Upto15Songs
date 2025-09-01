@@ -1,37 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
+  <meta charset="UTF-8">
+  <title>Register Page</title>
+  <link rel="stylesheet" href="register.css">
 </head>
 <body>
-<h1>Wellcome to the register page</h1>
+  <div class="form-container">
+    <h1>Welcome to the Register Page</h1>
+    
+    <form action="/register" method="post">
+      <label>User Name:</label>
+      <input type="text" name="username" placeholder="Enter your name" required>
 
-<form action="/register" method="post">
-	<label>User name:</label>
-	<input type="text" name="username"><br/><br/>
-	
-	<label>EmailId:</label>
-	<input type="email" name="email"><br/><br/>
-	
-	<label>Password:</label>
-	<input type="password" name="password"><br/><br/>
-	
-	<label>Gender:</label>
-	M<input type="radio" name="gender" value="Male">
-	F<input type="radio" name="gender" value="Female">
-	O<input type="radio" name="gender" value="Other"><br/><br/>
-	
-	<label>Role:</label>
-	Admit<input type="radio" name="role" value="admin">
-	Customer<input type="radio" name="role" value="customer"><br/><br/>
-	
-	<label>Address:</label>
-	<textarea name="address"></textarea><br/><br/>
-	
-	<input type="submit" value="REGISTER">
-</form>
+      <label>Email:</label>
+      <input type="email" name="email" placeholder="Enter your email" required>
 
+      <label>Password:</label>
+      <input type="password" name="password" placeholder="Enter your password" required>
 
+      <label>Gender:</label>
+      <div class="radio-group">
+        <label><input type="radio" name="gender" value="Male"> Male</label>
+        <label><input type="radio" name="gender" value="Female"> Female</label>
+        <label><input type="radio" name="gender" value="Other"> Other</label>
+      </div>
+
+      <label>Role:</label>
+      <div class="radio-group">
+        <label><input type="radio" name="role" value="admin"> Admin</label>
+        <label><input type="radio" name="role" value="customer"> Customer</label>
+      </div>
+
+      <label>Address:</label>
+      <textarea name="address" placeholder="Enter your address"></textarea>
+
+      <input type="submit" value="REGISTER" class="btn">
+    </form>
+  </div>
 </body>
 </html>
